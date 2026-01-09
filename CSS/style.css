@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif; }
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7eaee; }
+
+.posts {
+  display: grid;
+  grid-auto-columns: 1fr;
+  gap: 2em;
+  grid-template-areas: "post1 post1 post2 post5" "post3 post4 post4 post5";
+  color: #48556a;
+  width: 85%; }
+
+.post {
+  padding: 2em;
+  background-color: white;
+  border-radius: 1em;
+  width: 100%;
+  box-shadow: 0 8px 20px 8px rgba(72, 85, 106, 0.3); }
+  .post .post__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1em; }
+  .post p {
+    font-size: 1rem;
+    line-height: 1.5em; }
+
+.post__profile {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1.5em; }
+  .post__profile .post__profile-image {
+    background-color: rgba(231, 234, 238, 0.5);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .post__profile .post__profile-image img {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%; }
+  .post__profile .post__profile-name {
+    font-weight: 500; }
+
+.post1 {
+  background-color: #7541c8;
+  color: white;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 right 100px; }
+  .post1 .daniel_image {
+    background-color: rgba(196, 162, 246, 0.5); }
+
+.post2 {
+  background-color: #48556a;
+  color: white; }
+
+.post4 {
+  background-color: #19212e;
+  color: white; }
+  .post4 .patrick_image {
+    background-color: rgba(117, 65, 200, 0.5); }
+
+@media (max-width: 42rem) {
+  .posts {
+    display: flex;
+    flex-direction: column;
+    color: #48556a;
+    width: 100%;
+    padding: 30px; }
+
+  .post1 {
+    background-color: #7541c8;
+    color: white;
+    background-image: none; } }
+
+/*# sourceMappingURL=style.css.map */

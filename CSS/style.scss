@@ -1,0 +1,118 @@
+@import "variable";
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primaryFont;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   padding: 10em;
+  background-color: $color-100;
+}
+
+.posts {
+  display: grid;
+  grid-auto-columns: 1fr;
+  //   grid-auto-rows: 1fr;
+  gap: 2em;
+  grid-template-areas:
+    "post1 post1 post2 post5"
+    "post3 post4 post4 post5";
+  color: $color-500;
+  width: 85%;
+}
+
+.post {
+  padding: 2em;
+  background-color: $colorWhite;
+  border-radius: 1em;
+  width: 100%;
+  box-shadow: 0 8px 20px 8px rgba($color-500, 0.3);
+
+  .post__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5em;
+  }
+}
+
+.post__profile {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1.5em;
+
+  .post__profile-image {
+    background-color: rgba($color-100, 0.5);
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+    }
+  }
+
+  .post__profile-name {
+    font-weight: 500;
+  }
+}
+
+.post1 {
+  background-color: $primaryColor3;
+  color: $colorWhite;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 right 100px;
+
+  .daniel_image {
+    background-color: rgba($primaryColor2, 0.5);
+  }
+}
+
+.post2 {
+  background-color: $color-500;
+  color: $colorWhite;
+}
+
+.post4 {
+  background-color: $colorDarkBlue;
+  color: $colorWhite;
+
+  .patrick_image {
+    background-color: rgba($primaryColor3, 0.5);
+  }
+}
+
+@media (max-width: 42rem) {
+  .posts {
+    display: flex;
+    flex-direction: column;
+    color: $color-500;
+    width: 100%;
+    padding: 30px;
+  }
+
+  .post1 {
+    background-color: $primaryColor3;
+    color: $colorWhite;
+    background-image: none;
+  }
+}
