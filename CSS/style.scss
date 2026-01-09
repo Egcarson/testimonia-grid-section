@@ -40,19 +40,19 @@ body {
   .post__title {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1em;
+    margin-bottom: 0.7em;
   }
 
   p {
     font-size: 1rem;
-    line-height: 1.5em;
+    line-height: 1.3em;
   }
 }
 
 .post__profile {
   display: flex;
   gap: 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.6em;
 
   .post__profile-image {
     background-color: rgba($color-100, 0.5);
@@ -70,6 +70,9 @@ body {
     }
   }
 
+  p {
+    font-size: 0.8rem;
+  }
   .post__profile-name {
     font-weight: 500;
   }
@@ -101,7 +104,26 @@ body {
   }
 }
 
-@media (max-width: 42rem) {
+@media (max-width: 76rem) {
+  .posts {
+    display: grid;
+    grid-auto-columns: 1fr;
+    //   grid-auto-rows: 1fr;
+    gap: 2em;
+    grid-template-areas:
+//   "post1 post1 post2 post5"
+//     "post3 post4 post4 post5";
+
+      "post1 post1 post5"
+      "post2 post3 post5"
+      "post4 post4 post5";
+    color: $color-500;
+    width: 85%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 50rem) {
   .posts {
     display: flex;
     flex-direction: column;
